@@ -31,7 +31,7 @@
     "admin.success_pw":         { "en": "Password updated.",            "zh": "密碼已更新。" },
 
     "tree.edit_title":          { "en": "✏️ Edit tree",                "zh": "✏️ 編輯樹狀圖" },
-    "tree.clean_view":          { "en": "👁️ Clean View",               "zh": "👁️ 清潔視圖" },
+    "tree.clean_view":          { "en": "👁️ Clean View",               "zh": "👁️ 預覽視圖" },
     "tree.edit_view":           { "en": "✏️ Edit View",                 "zh": "✏️ 編輯視圖" },
     "tree.add_member":          { "en": "+ Add Member",                 "zh": "+ 新增成員" },
     "tree.noscript":            { "en": "JavaScript is required to display the family tree.", "zh": "需要 JavaScript 才能顯示家譜。" },
@@ -40,7 +40,7 @@
     "tree.not_found":           { "en": "Tree not found.",              "zh": "找不到樹狀圖。" },
 
     "member.add_title":         { "en": "Add Family Member",            "zh": "新增家庭成員" },
-    "member.edit_title":        { "en": "Edit Member",                  "zh": "編輯家庭成員" },
+    "member.edit_title":        { "en": "Edit Member",                  "zh": "編輯成員" },
     "member.edit_title_short":  { "en": "Edit",                         "zh": "編輯" },
     "member.add":               { "en": "Add Member",                   "zh": "新增成員" },
     "member.breadcrumb_edit":   { "en": "Edit:",                        "zh": "編輯：" },
