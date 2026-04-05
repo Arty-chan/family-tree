@@ -144,11 +144,11 @@ nav .breadcrumb-current { color: #ddd; }
     white-space: nowrap;
 }
 .btn-primary   { background: #2c3e50; color: #fff; }
-.btn-primary:hover   { background: #3a5068; }
+.btn-primary:hover   { background: #3a5068; color: #fff; }
 .btn-secondary { background: #e8e4de; color: #333; }
-.btn-secondary:hover { background: #d8d4ce; }
+.btn-secondary:hover { background: #d8d4ce; color: #333; }
 .btn-danger    { background: #b03030; color: #fff; }
-.btn-danger:hover    { background: #8e2626; }
+.btn-danger:hover    { background: #8e2626; color: #fff; }
 .btn-sm { padding: 4px 10px; font-size: .8rem; }
 
 /* ── Forms ── */
