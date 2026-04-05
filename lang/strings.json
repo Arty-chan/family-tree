@@ -30,8 +30,8 @@
     "admin.err_title_empty":    { "en": "Please enter a title for the new tree.", "zh": "請輸入新樹狀圖的標題。" },
     "admin.success_pw":         { "en": "Password updated.",            "zh": "密碼已更新。" },
 
-    "tree.edit_title":          { "en": "✏️ Edit tree",                "zh": "✏️ 編輯標題" },
-    "tree.clean_view":          { "en": "👁️ Clean View",               "zh": "👁️ 清晰的視野" },
+    "tree.edit_title":          { "en": "✏️ Edit tree",                "zh": "✏️ 編輯樹狀圖" },
+    "tree.clean_view":          { "en": "👁️ Clean View",               "zh": "👁️ 清潔視圖" },
     "tree.edit_view":           { "en": "✏️ Edit View",                 "zh": "✏️ 編輯視圖" },
     "tree.add_member":          { "en": "+ Add Member",                 "zh": "+ 新增成員" },
     "tree.noscript":            { "en": "JavaScript is required to display the family tree.", "zh": "需要 JavaScript 才能顯示家譜。" },
@@ -50,7 +50,7 @@
     "member.birth_year_ph":     { "en": "e.g. 1942",                    "zh": "例如 1942" },
     "member.death_year_ph":     { "en": "leave blank if living",        "zh": "如果此人仍在世，請留空" },
     "member.approximate":       { "en": "Approximate",                  "zh": "近似" },
-    "member.approximate_short": { "en": "Approx.",                      "zh": "约" },
+    "member.approximate_short": { "en": "Approx.",                      "zh": "約" },
     "member.photo":             { "en": "Photo",                        "zh": "照片" },
     "member.current_photo":     { "en": "Current photo",                "zh": "目前照片" },
     "member.remove_photo":      { "en": "Remove photo",                 "zh": "移除照片" },
@@ -69,10 +69,10 @@
     "member.year_married":      { "en": "Year Married",                 "zh": "結婚年份" },
     "member.year_separated":    { "en": "Year Separated / Divorced",    "zh": "分居年份" },
     "member.year_separated_ph": { "en": "leave blank if still married", "zh": "如果仍已婚，請留空" },
-    "member.btn_add_another":   { "en": "Add Another",                  "zh": "再添加一個" },
+    "member.btn_add_another":   { "en": "Add Another",                  "zh": "再新增一個" },
     "member.btn_save_stay":     { "en": "Save & Keep Editing",          "zh": "儲存並繼續編輯" },
     "member.btn_back_tree":     { "en": "Back to Tree",                 "zh": "返回家譜" },
-    "member.relationships":     { "en": "Relationships",                "zh": "人際關係" },
+    "member.relationships":     { "en": "Relationships",                "zh": "親屬關係" },
     "member.no_rels":           { "en": "No relationships yet.",        "zh": "暫無關係。" },
     "member.add_rel":           { "en": "Add Relationship",             "zh": "新增關係" },
     "member.remove_rel":        { "en": "Remove",                       "zh": "移除" },
@@ -82,8 +82,8 @@
     "member.rel_married":       { "en": "married",                      "zh": "已婚" },
     "member.rel_separated":     { "en": "separated",                    "zh": "分居" },
 
-    "member.err_name":          { "en": "Name is required.",            "zh": "姓名（必填）。" },
-    "member.err_death_year":    { "en": "Death year cannot be earlier than birth year.", "zh": "死亡年份不能早於出生年份。" },
+    "member.err_name":          { "en": "Name is required.",            "zh": "請填寫姓名。" },
+    "member.err_death_year":    { "en": "Death year cannot be earlier than birth year.", "zh": "逝世年份不能早於出生年份。" },
     "member.err_2parents_this": { "en": "This person already has 2 parents.", "zh": "這個人已經有兩個父母了。" },
     "member.err_2parents_that": { "en": "That person already has 2 parents.", "zh": "那個人已經有兩個父母了。" },
     "member.err_select_rel":    { "en": "Please select a relationship type and a family member.", "zh": "請選擇關係類型和家庭成員。" },
@@ -116,10 +116,10 @@
 
     "photo.upload_error":       { "en": "Upload error (code %s).",      "zh": "上傳錯誤（代碼 %s）。" },
     "photo.too_large":          { "en": "Photo must be ≤ 5 MB.",        "zh": "照片大小必須小於 5 MB。" },
-    "photo.invalid_image":      { "en": "File is not a valid image.",   "zh": "文件不是有效的圖像。" },
+    "photo.invalid_image":      { "en": "File is not a valid image.",   "zh": "檔案不是有效的圖像。" },
     "photo.unsupported_format": { "en": "Unsupported image format. Please upload a JPG, PNG, GIF, or WebP.", "zh": "不支援的圖像格式。請上傳 JPG、PNG、GIF 或 WebP。" },
-    "photo.unreadable":         { "en": "Could not read the image file.", "zh": "無法讀取映像文件。" },
-    "photo.save_failed":        { "en": "Could not save the photo.",    "zh": "照片無法保存。" },
+    "photo.unreadable":         { "en": "Could not read the image file.", "zh": "無法讀取圖像檔案。" },
+    "photo.save_failed":        { "en": "Could not save the photo.",    "zh": "照片無法儲存。" },
 
     "js.edit":                  { "en": "✏️ Edit",                      "zh": "✏️ 編輯" }
 }
