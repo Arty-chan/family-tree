@@ -1,0 +1,11 @@
+# ── Root .htaccess — defense-in-depth ────────────────────────────────────────
+# Apache processes .htaccess files for every directory in the filesystem path,
+# including parents of DocumentRoot. This file only blocks sensitive data files —
+# never PHP, so execution in public/ is not affected.
+
+# Block direct access to database and config files
+<FilesMatch "\.(db|db-wal|db-shm|sqlite|sqlite3)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes

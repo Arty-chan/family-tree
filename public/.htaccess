@@ -1,0 +1,59 @@
+# ── Block direct access to the SQLite database ──────────────────────────────
+<FilesMatch "\.(db|db-wal|db-shm|sqlite|sqlite3)$">
+    Require all denied
+</FilesMatch>
+
+# ── Block sensitive files ──────────────────────────────────────────
+<FilesMatch "^\.(htaccess|htpasswd|gitignore|git)">
+    Require all denied
+</FilesMatch>
+
+# ── Rewrite rules ─────────────────────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Whitelist allowed file types only — block everything else that is a static file
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule !\.(html|php|css|js|ttf|woff2|jpg|jpeg|gif|png)$ - [F,L]
+
+    # Skip existing files/directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Clean URL routes
+    RewriteRule ^login/?$                   login.php        [L,QSA]
+    RewriteRule ^tree/(\d+)/$               tree.php?id=$1   [L,QSA]
+    RewriteRule ^tree/(\d+)/edit/$          edit_tree.php?id=$1 [L,QSA]
+    RewriteRule ^tree/(\d+)/add-member/$    add_member.php?tree_id=$1 [L,QSA]
+    RewriteRule ^member/(\d+)/edit/$        edit_member.php?id=$1 [L,QSA]
+    RewriteRule ^member/delete/?$           delete_member.php [L,QSA]
+    RewriteRule ^relationship/delete/?$     delete_relationship.php [L,QSA]
+    RewriteRule ^photo/(\d+)/?$             photo.php?id=$1  [L,QSA]
+</IfModule>
+
+# ── Security headers ─────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; connect-src 'self'"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+    Header always unset X-Powered-By
+    Header always unset Server
+</IfModule>
+
+# ── HSTS (only on production, not localhost) ──────────────────────────────────
+<IfModule mod_headers.c>
+    <If "%{HTTP_HOST} != 'localhost'">
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+    </If>
+</IfModule>
+
+# ── Optional: block directory listings ───────────────────────────────────────
+Options -Indexes
+
+# ── Disable server signature ─────────────────────────────────────────────────
+ServerSignature Off

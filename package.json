@@ -1,0 +1,28 @@
+{
+  "name": "family-tree",
+  "version": "1.0.0",
+  "description": "A self-hosted, lightweight, two-language family tree manager built with PHP, JavaScript, and SQLite. No external dependencies — everything runs from a files on your web server.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "posttest": "node -e \"const fs=require('fs');['test-results','playwright-report'].forEach(d=>{if(fs.existsSync(d))fs.rmSync(d,{recursive:true})})\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arty-chan/family-tree.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Arty-chan/family-tree/issues"
+  },
+  "homepage": "https://github.com/Arty-chan/family-tree#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

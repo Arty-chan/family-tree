@@ -1,0 +1,9 @@
+family_tree.db
+backup/
+node_modules/
+playwright-report/
+test-results/
+tests/E2E/*.png
+tests/E2E/*.txt
+uploads/
+vendor/
