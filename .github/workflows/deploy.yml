@@ -34,7 +34,7 @@ jobs:
 
       - name: Deploy with rsync
         run: |
-          rsync -avz --checksum --delete \
+          rsync -avzO --checksum --delete \
             --filter=':- .gitignore' \
             --exclude 'backup/' \
             --exclude 'family_tree.db' \
