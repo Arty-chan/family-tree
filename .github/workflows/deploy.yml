@@ -38,7 +38,15 @@ jobs:
             --filter=':- .gitignore' \
             --exclude 'backup/' \
             --exclude 'family_tree.db' \
+            --exclude 'family_tree.db-*' \
             --exclude 'uploads/' \
+            --exclude '.env.*' \
+            --exclude '.env' \
+            --exclude '.user.ini' \
+            --exclude '.well-known/' \
+            --exclude '*.log' \
+            --exclude 'cgi-bin/' \
+            --exclude 'error_log' \
             --exclude '.git/' \
             --exclude '.github/' \
             --exclude '.gitignore' \
